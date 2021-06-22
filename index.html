@@ -7,66 +7,104 @@
     <title>Java Script 01</title>
 <script>
 
-document.writeln("<h1>Hola mundo JavaScript</h1>");
+var fecha = new Date();
+var texto = new String();
+var hora = fecha.getHours();
 
-document.writeln("<center>");
-document.writeln("<table border='1'>");
+document.writeln("Hora: "+hora);
 
-        //reng 1
+if (hora >= 24 || hora < 12){
+    alert("Bienvenid@, buenos días son las: "+hora+" am");
+}else if (hora>=12 && hora<18){
+
+    alert("Bienvenid@, buenas tardes son las: "+hora+" pm");
+
+}else if ((hora>=18 && hora<24)){
+    alert("Bienvenid@, buenas noches son las: "+hora+" pm");
+}
+
+
+
+
+
+
+
+var nombre = "";
+var edad = 0;
+var localidad = "";
+var profesion = "";
+
+nombre = prompt("¿Cuál es tu nombre?");
+edad = prompt("¿Cuál es tu edad ?");
+localidad = prompt("¿Cuál es tu localidad?");
+profesion = prompt("¿Cuál es tu profesion?");
+
+var respuesta = confirm("¿Los datos son correctos?"+
+                        " \n Nombre: "+nombre+
+                        "\n Edad: "+edad+     
+                        "\n Localidad: "+ localidad+
+                        "\n Profesion: "+profesion);
+
+if(respuesta){
+
+    document.writeln("<center>");
+    document.writeln("<table border='1'>");
+
+    //reng 1
     document.writeln("<tr>");
-        //col1
-        document.writeln("<td rowspan='4'>");
-            
-            document.writeln("<img src='https://wi.wallpapertip.com/wsimgs/4-41361_spiderman-night-monkey-art.jpg' alt='#'>");
-        document.writeln("</td>")
-        //col2
-        document.writeln("<td>");
-            document.writeln("<b>Nombre:</b> Angel Diaz");
-        document.writeln("</td>")
+    //col1
+    document.writeln("<td rowspan='4' width='25%'>");
 
-     document.writeln("</tr>");
+    document.writeln("Foto");
+    document.writeln("</td>")
+    //col2
+    document.writeln("<td>");
+    document.writeln("<b>Nombre:</b> "+nombre);
+    document.writeln("</td>")
 
-  //reng 2
-  document.writeln("<tr>");
+    document.writeln("</tr>");
+
+    //reng 2
+    document.writeln("<tr>");
     //col1 reng 2
     document.writeln("<td>");
-            document.writeln("<b>Edad:</b> 19");
-        document.writeln("</td>")
+    document.writeln("<b>Edad:</b>"+edad);
+    document.writeln("</td>")
 
     document.writeln("</tr>");
 
 
-    
-   //reng 3
-document.writeln("<tr>");
+
+    //reng 3
+    document.writeln("<tr>");
     document.writeln("<td>");
-            document.writeln("<b>Localidad:</b> Jiuteyork");
-        document.writeln("</td>")
- document.writeln("</tr>");
+    document.writeln("<b>Localidad:</b>" + localidad);
+    document.writeln("</td>")
+    document.writeln("</tr>");
 
 
 
-   //reng 4
-document.writeln("<tr>");
+    //reng 4
+    document.writeln("<tr>");
 
     document.writeln("<td>");
-            document.writeln("<b>Profesion:</b> Estudiante");
-        document.writeln("</td>");
+    document.writeln("<b>Profesion:</b>"+profesion);
+    document.writeln("</td>");
 
- document.writeln("</tr>");
-
-
-
-
-
-
-document.writeln("</table>");
-document.writeln("</center>");
+    document.writeln("</tr>");
 
 
 
 
 
+
+    document.writeln("</table>");
+    document.writeln("</center>");
+
+}else{
+
+    alert("Gracias por visitarnos");
+}
 
 
 
